@@ -31,7 +31,7 @@ func Load() *Config {
 	return &Config{
 		AppPort:        getEnv("APP_PORT", "8000"),
 		AppEnv:         getEnv("APP_ENV", "development"),
-		SecretKey:      getEnv("APP_SECRET_KEY", "change-me-in-production"),
+		SecretKey:      getEnv("APP_SECRET_KEY", ""),
 		JWTExpiryHours: expiryHours,
 		DBPath:         getEnv("DB_PATH", "./dpp.db"),
 		AdminEmail:     getEnv("ADMIN_EMAIL", "admin@passportx.com"),
