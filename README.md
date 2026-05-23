@@ -6,7 +6,7 @@ Go + Gin ile yazılmış PassportX uygulamasının API'si.
 
 ## Teknoloji Seçimleri ve Gerekçeleri
 
-|**Katman**:Teknoloji =>Gerekçe |
+**Katman**:Teknoloji =>Gerekçe
 
 **Dil**:Go => Python veya Node.js'e kıyasla derlenen binary üretir, runtime kurulumu gerekmez. Statik tip sistemi hataları derleme zamanında yakalar, Goroutine ile yüksek eşzamanlılık sağlar,düşük bellek kullanılır.
 
@@ -32,7 +32,7 @@ Go + Gin ile yazılmış PassportX uygulamasının API'si.
 
 ```bash
 # 1. Backend klasörüne gir
-cd <adin>-case-backend
+cd TunahanYilmaz-case-backend
 
 # 2. Bağımlılıkları indir
 go mod tidy
@@ -65,7 +65,7 @@ Uygulama ilk kez çalıştırıldığında sistemde admin kullanıcısı yoksa o
 ```
 ============================================================
 DEFAULT ADMIN CREDENTIALS (save these now!)
-  Email:    admin@dpp.com
+  Email:    admin@passportx.com
   Password: A1!xK9mR2vLqN5pT8wYz
 These will NOT be shown again.
 ============================================================
