@@ -34,7 +34,7 @@ func Load() *Config {
 		SecretKey:      getEnv("APP_SECRET_KEY", "change-me-in-production"),
 		JWTExpiryHours: expiryHours,
 		DBPath:         getEnv("DB_PATH", "./dpp.db"),
-		AdminEmail:     getEnv("ADMIN_EMAIL", "admin@dpp.com"),
+		AdminEmail:     getEnv("ADMIN_EMAIL", "admin@passportx.com"),
 		AdminPassword:  getEnv("ADMIN_PASSWORD", ""),
 	}
 }
