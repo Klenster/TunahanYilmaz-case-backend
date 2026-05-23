@@ -14,7 +14,7 @@ const (
 )
 
 // User veritabanı kullanıcı modelidir.
-// Şifre asla düz metin olarak saklanmaz — bcrypt hash kullanılır.
+// Şifre için bcrypt hash kullanılır.
 type User struct {
 	ID             string    `gorm:"primaryKey" json:"id"`
 	Email          string    `gorm:"uniqueIndex;not null" json:"email"`
