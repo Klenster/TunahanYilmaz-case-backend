@@ -43,6 +43,8 @@ Integer ID'ye kıyasla tahmin edilemez. saldırgan /products/1, /products/2 diye
 ### Adımlar
 
 ```bash
+# 1.klasöre geçiş
+cd TunahanYilmaz-case-backend
 
 # 2. Bağımlılıkları indir
 go mod tidy
