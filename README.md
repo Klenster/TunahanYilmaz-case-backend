@@ -6,21 +6,33 @@ Go + Gin ile yazılmış PassportX uygulamasının API'si.
 
 ## Teknoloji Seçimleri ve Gerekçeleri
 
-**Katman**:Teknoloji =>Gerekçe
+### Dil - Go
 
-**Dil**:Go => Python veya Node.js'e kıyasla derlenen binary üretir, runtime kurulumu gerekmez. Statik tip sistemi hataları derleme zamanında yakalar, Goroutine ile yüksek eşzamanlılık sağlar,düşük bellek kullanılır.
+Python veya Node.js'e kıyasla derlenen binary üretir, runtime kurulumu gerekmez. Statik tip sistemi hataları derleme zamanında yakalar, Goroutine ile yüksek eşzamanlılık sağlar,düşük bellek kullanılır.
 
-**Framework**:Gin=>Go'nun en yaygın web framework'ü. Express.js'e kıyasla çok daha düşük latency, middleware zinciri, route gruplama ve JSON binding built-in gelir; fazladan kütüphanelere gerek kalmaz.
+### Framework - Gin
 
-**Orm**:Gorm=>SQLAlchemy veya Prisma'ya alternatiftir. AutoMigrate ile migration dosyası yazmadan şema yönetimi, Preload ile ilişkisel veri desteği sağlar.
+Go'nun en yaygın web framework'ü. Express.js'e kıyasla çok daha düşük latency, middleware zinciri, route gruplama ve JSON binding built-in gelir; fazladan kütüphanelere gerek kalmaz.
 
-**Veritabanı**SQLite=>PostgreSQL veya MySQL'e kıyasla daha kolay kurulum, tek dosya. Bu ölçekteki bir proje için en uygun seçim; ileride sadece driver değiştirilerek PostgreSQL'e geçilebilir.
+### Orm - Gorm
 
-**Auth**:JWT=>Session tabanlı auth'a kıyasla sunucuda state tutmaz. Token içinde rol bilgisi taşır, her istekte veritabanına gidilmez. Token içerisinde rol bilgisi taşıdığı için her istekte kullanıcı sorgusu yapmaya gerek kalmaz, performans artar.
+SQLAlchemy veya Prisma'ya alternatiftir. AutoMigrate ile migration dosyası yazmadan şema yönetimi, Preload ile ilişkisel veri desteği sağlar.
 
-**Şifreleme**:bcrypt=> MD5/SHA gibi hızlı algoritmaların aksine kasıtlı yavaş çalıştırılır, brute-force olasılığını azaltır.Salt otomatik üretilir,rainbow table saldırılarını önleyebilir.
+### Veritabanı - SQLite
 
-**UUID**google/uuid=>Integer ID'ye kıyasla tahmin edilemez. saldırgan /products/1, /products/2 diyerek kayıtları enumerate edemez.
+PostgreSQL veya MySQL'e kıyasla daha kolay kurulum, tek dosya. Bu ölçekteki bir proje için en uygun seçim; ileride sadece driver değiştirilerek PostgreSQL'e geçilebilir.
+
+### Auth - JWT
+
+Session tabanlı auth'a kıyasla sunucuda state tutmaz. Token içinde rol bilgisi taşır, her istekte veritabanına gidilmez. Token içerisinde rol bilgisi taşıdığı için her istekte kullanıcı sorgusu yapmaya gerek kalmaz, performans artar.
+
+### Şifreleme - bcrypt
+
+MD5/SHA gibi hızlı algoritmaların aksine kasıtlı yavaş çalıştırılır, brute-force olasılığını azaltır.Salt otomatik üretilir,rainbow table saldırılarını önleyebilir.
+
+### UUID - google/uuid
+
+Integer ID'ye kıyasla tahmin edilemez. saldırgan /products/1, /products/2 diyerek kayıtları enumerate edemez.
 
 ## Kurulum
 
