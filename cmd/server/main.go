@@ -15,7 +15,7 @@ func main() {
 	// Ayarları yükle
 	cfg := config.Load()
 	if cfg.SecretKey == "" {log.Fatal("APP_SECRET_KEY must be set in .env file")}
-
+    
 	// Veritabanı bağlantısı ve migration'ı
 	database, err := db.Connect(cfg.DBPath)
 	if err != nil {

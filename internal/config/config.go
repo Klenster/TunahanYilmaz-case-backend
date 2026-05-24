@@ -1,7 +1,6 @@
 package config
 
 import (
-	"log"
 	"os"
 	"strconv"
 
@@ -11,19 +10,20 @@ import (
 // Config uygulama genelinde kullanılan ayarları tutar.
 // Tüm değerler .env dosyasından veya ortam değişkenlerinden okunur.
 type Config struct {
-	AppPort       string
-	AppEnv        string
-	SecretKey     string
+	AppPort        string
+	AppEnv         string
+	SecretKey      string
 	JWTExpiryHours int
-	DBPath        string
-	AdminEmail    string
-	AdminPassword string
+	DBPath         string
+	AdminEmail     string
+	AdminPassword  string
 }
 
 func Load() *Config {
-	// .env dosyası yoksa hata vermez, ortam değişkenlerini kullanır
-	if err := godotenv.Load(); err != nil {
-		log.Println("No .env file found, using environment variables")
+	for _, p := range []string{".env", "../../.env", "../../../.env"} {
+		if err := godotenv.Load(p); err == nil {
+			break
+		}
 	}
 
 	expiryHours, _ := strconv.Atoi(getEnv("JWT_EXPIRY_HOURS", "24"))
