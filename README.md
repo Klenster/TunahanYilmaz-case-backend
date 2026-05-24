@@ -24,7 +24,7 @@ PostgreSQL veya MySQL'e kıyasla daha kolay kurulum, tek dosya. Bu ölçekteki b
 
 ### Auth - JWT
 
-Session tabanlı auth'a kıyasla sunucuda state tutmaz. Token içinde rol bilgisi taşır, her istekte veritabanına gidilmez. Token içerisinde rol bilgisi taşıdığı için her istekte kullanıcı sorgusu yapmaya gerek kalmaz, performans artar.
+Session tabanlı auth'a kıyasla sunucuda state tutmaz.Token içerisinde rol bilgisi taşıdığı için her istekte kullanıcı sorgusu yapmaya gerek kalmaz, performans artar.
 
 ### Şifreleme - bcrypt
 
@@ -156,20 +156,6 @@ Auditor bir kullanıcı doğrudan `POST /api/products/` isteği atsa bile `403` 
 - `.env` dosyası `.gitignore`'da, repoya commit edilmez
 - Kullanıcı bulunamadı ile yanlış şifre aynı hata mesajını döner (kullanıcı enumeration önleme)
 - Materyal yüzdesi validasyonu backend'de yapılır
-
----
-
-## Docker
-
-Backend ve frontend klasörleri aynı kök dizinde bulunması gerekir ve yml dosyasının frontend klasörünün içinde bulunması gerekir.
-
-```bash
-cd TunahanYilmaz-case-frontend
-
-docker-compose up --build
-```
-
-Backend port 8000'de çalışır.
 
 ---
 
